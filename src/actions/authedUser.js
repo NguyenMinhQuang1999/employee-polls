@@ -18,9 +18,9 @@ export function handleLogin(username, password) {
   return (dispatch, getState) => {
     const { users } = getState();
     const user = Object.values(users).find(
-      (user) => user.id === username && user.password === password
+      user => user.id === username && user.password === password
     );
-    if (user != null) {
+    if (user) {
       return dispatch(setAuthedUser(user.id));
     }
   };

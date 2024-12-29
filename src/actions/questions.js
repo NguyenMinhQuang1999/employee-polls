@@ -28,7 +28,6 @@ export function handleAddQuestion(question) {
    question.author = authedUser;
 
     dispatch(showLoading());
-    console.log("questoin========", question);
 
     return saveQuestion(question)
       .then((question) => {

@@ -30,12 +30,12 @@ const PollPage = ({ dispatch, authedUser, users, questions }) => {
   };
 
   const percentVote = (option, question) => {
-    const numberVotesTotal =
+    const totalVote =
       question.optionOne.votes.length + question.optionTwo.votes.length;
       if (option === "optionOne") {
         return (
               (
-                (question.optionOne.votes.length / numberVotesTotal) *
+                (question.optionOne.votes.length /  totalVote) *
                 100
               ).toFixed(2) + "%"
             );
@@ -44,7 +44,7 @@ const PollPage = ({ dispatch, authedUser, users, questions }) => {
       if (option === "optionTwo") {
             return (
               (
-                (question.optionTwo.votes.length / numberVotesTotal) *
+                (question.optionTwo.votes.length /  totalVote) *
                 100
               ).toFixed(2) + "%"
             );
@@ -103,8 +103,6 @@ const PollPage = ({ dispatch, authedUser, users, questions }) => {
       </div>
     </div>
   );
-
-
 };
 
 const mapStateToProps = ({ authedUser, questions, users }) => {

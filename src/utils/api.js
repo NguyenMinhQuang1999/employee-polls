@@ -14,10 +14,10 @@ export function getInitialData() {
   );
 }
 
-export function saveQuestion(info) {
-  return _saveQuestion(info);
+export function saveQuestion(data) {
+  return _saveQuestion(data);
 }
 
-export function saveQuestionAnswer(info) {
-  return _saveQuestionAnswer(info);
+export function saveQuestionAnswer(data) {
+  return _saveQuestionAnswer(data);
 }
